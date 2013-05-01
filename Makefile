@@ -6,7 +6,14 @@ else #has to be tested ;)
 	EXT = ""
 endif
 
-all: $(patsubst %.cpp, bin/*$(EXT), $(wildcard Euler_*.cpp))
+BINDIR = bin
+SOURCES = $(wildcard Euler_*.cpp)
+TARGETS = $(patsubst %.cpp, $(BINDIR)/%$(EXT), $(SOURCES) )
 
-bin/%.exe: %.cpp Makefile
+all: $(BINDIR) $(TARGETS)
+
+$(BINDIR):
+	-@ if not exist $(BINDIR) mkdir $(BINDIR)
+
+bin/%.exe: %.cpp  
 	$(CC) $< -o $@ -Iinclude -O2
