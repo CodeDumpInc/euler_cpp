@@ -17,7 +17,7 @@ all: $(BINDIR) $(TARGETS)
 $(BINDIR):
 	mkdir $(BINDIR) -p
 bin/%$(EXT): %.cpp  
-	$(CC) $< -o $@ -Iinclude -O2
+	$(CC) $< -o $@ -Iinclude -O2 -Wall
 
 clean: 
 	rm ./$(BINDIR)/*
