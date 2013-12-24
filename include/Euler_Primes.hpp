@@ -1,7 +1,7 @@
-#ifndef _HELPERS_PRIMES_H
-#define _HELPERS_PRIMES_H
+#ifndef _EULER_PRIMES_H
+#define _EULER_PRIMES_H
 
-#include "Helpers_Primes.hpp"
+#include "Euler_Helpers.hpp"
 
 bool is_prime(int n ){
 	if( n <= 1) return false;

@@ -1,5 +1,5 @@
-#ifndef _EULER_H
-#define _EULER_H
+#ifndef _EULER_HELPERS_H
+#define _EULER_HELPERS_H
 
 int ldf( int k, int n){
 	if( n % k == 0) return k;
