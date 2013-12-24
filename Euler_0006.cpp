@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdio>
 #include <cmath>
 
 int main(int argc, char* argv[]){
@@ -12,7 +11,5 @@ int main(int argc, char* argv[]){
 	}
 
 	std::cout << sum*sum - sum_squares << std::endl;
-
-	getchar();
 	return 0;
 }

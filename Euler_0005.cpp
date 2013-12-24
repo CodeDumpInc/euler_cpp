@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdio>
 #include <cmath>
 
 int main(int argc, char* argv[]){
@@ -21,7 +20,5 @@ int main(int argc, char* argv[]){
 	}
 
 	std::cout << i << std::endl;
-
-	getchar();
 	return 0;
 }

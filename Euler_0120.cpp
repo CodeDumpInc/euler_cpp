@@ -3,7 +3,6 @@
 
 typedef long long ResultType;
 
-
 int main(int argc, char* argv[]){
 
 	ResultType sum = 0;	

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdio>
 
 #include "Euler_Primes.hpp"
 
@@ -14,7 +13,5 @@ int main(int argc, char* argv[]){
 	}
 			
 	std::cout << result << std::endl;
-	
-	getchar();
 	return 0;
 }

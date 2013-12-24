@@ -1,14 +1,11 @@
 #include <iostream>
-#include <cstdio>
 #include <cmath>
 
 int get_num_digits( int n ){
-	int i = 1;
-
-	while( n >= pow(10, i)){
-		i++;
+	if( n == 0 ){
+		return 1;
 	}
-	return i;
+	return log10(n)+1;
 }
 
 int get_ith_digit( int n, int i){
@@ -20,7 +17,7 @@ int get_ith_digit( int n, int i){
 	int upper_exp = std::ceil(std::pow(10, k-i));
 	int lower_exp = std::ceil(std::pow(10, k-i-1));
 	
-	return (n % upper_exp - n% lower_exp)/lower_exp;	
+	return (n % upper_exp - n % lower_exp)/lower_exp;	
 }
 
 bool is_palindrome( int n ){
@@ -30,7 +27,6 @@ bool is_palindrome( int n ){
 		if(  get_ith_digit( n, i ) != get_ith_digit( n, k-1-i ) )
 			return false;
 	}
-
 	return true;
 }
 
@@ -47,6 +43,5 @@ int main(int argc, char* argv[]){
 	}
 	std::cout << max << std::endl;
 
-	getchar();
 	return 0;
 }
