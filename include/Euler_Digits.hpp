@@ -3,14 +3,16 @@
 
 #include <cmath>
 
-int get_num_digits( int n ){
+template <typename Type>
+Type get_num_digits( Type n ){
 	if( n == 0 ){
 		return 1;
 	}
 	return static_cast<int>(log10(n)+1);
 }
 
-int get_ith_digit( int n, int i){
+template <typename Type>
+Type get_ith_digit( Type n, int i){
 
 	if( i < 0) return -1;
 	int k = get_num_digits( n );
