@@ -61,7 +61,6 @@ int main(){
 			//at this point, there are 9 digits in the identity and each one was added
 			//also there was no zero added, so there must be all digits in the sum
 			if(products.find(product) == products.end()){
-				int i = 0;
 				result += product;
 				products.insert(product);
 			}

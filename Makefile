@@ -1,6 +1,6 @@
 BINDIR = bin
 ifeq ($(OS),Windows_NT)
-	CC = "mingw32-g++-4.6.2.exe"
+	CC = "g++.exe"
 	EXT = .exe
 	CHECKDIR = "-@ if not exist $(BINDIR) mkdir $(BINDIR)"
 else
@@ -17,7 +17,7 @@ all: $(BINDIR) $(TARGETS)
 $(BINDIR):
 	mkdir $(BINDIR) -p
 bin/%$(EXT): %.cpp  
-	$(CC) $< -o $@ -Iinclude -O2 -Wall
+	$(CC) $< -o $@ -Iinclude -O2 -Wall -std=c++11
 
 clean: 
 	rm ./$(BINDIR)/*
